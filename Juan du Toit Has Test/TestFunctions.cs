@@ -77,7 +77,9 @@ namespace Juan_du_Toit_Has_Test
            ILogger log)
         {
             HttpClient http = new HttpClient();
-            var data = http.GetAsync("https://jsonplaceholder.typicode.com/todos/1").Result.Content.ReadAsStringAsync().Result;
+            string id = req.Query["Id"] ;
+            id = string.IsNullOrEmpty(id) ?"1":id;
+            var data = http.GetAsync($"https://jsonplaceholder.typicode.com/todos/{id}").Result.Content.ReadAsStringAsync().Result;
             try
             {
                 throw new Exception("something went wrong everywhere");
