@@ -12,9 +12,13 @@ using System.Net.Http;
 using System.Net;
 using AzureFunctions.Extensions.Swashbuckle.Attribute;
 using AzureFunctions.Extensions.Swashbuckle;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Xunit;
 
 namespace Juan_du_Toit_Has_Test
 {
+    
     public class TestFunctions
     {
         private readonly PracticalTestContext _context;

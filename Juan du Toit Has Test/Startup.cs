@@ -22,7 +22,6 @@ namespace Juan_du_Toit_Has_Test
             var environment = r.Next(1, 3); //meant to represent which environment this code is performing hence representing slightly different code that can execute
             if (environment == 1)
             {
-
                 builder.Services.AddSingleton<ICustomLogger, Log>();
             }
             else if (environment == 2)
